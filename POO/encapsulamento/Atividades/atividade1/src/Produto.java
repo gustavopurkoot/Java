@@ -5,8 +5,8 @@ public class Produto {
 
     public Produto(String nome, double preco, int quantidade) {
         this.nome = nome;
-        setPreco(preco); // usando validação
-        setQuantidade(quantidade); // usando validação
+        setPreco(preco);
+        setQuantidade(quantidade);
     }
 
     public String getNome() {
