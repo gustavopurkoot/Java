@@ -48,17 +48,19 @@ public class Main {
                     carros.add(novo);
                     }
 
-                    System.out.println("Carro cadastrado!");
+                    System.out.println("\nCarro cadastrado!");
                     break;
 
                 case 2:
                     if (carros.isEmpty()) {
-                        System.out.println("Nenhum carro cadastrado.");
+                        System.out.println("\nNenhum carro cadastrado.");
                     } else {
-                        for (int i = 0; i < carros.size(); i++) {
-                            System.out.println("Carro " + (i + 1) + ":");
-                            carros.get(i).status();
-                            System.out.println();
+                        for (Carro carro : carros) {
+                            System.out.println("Marca: " + carro.getMarca());
+                            System.out.println("Modelo: " + carro.getModelo());
+                            System.out.println("Ano: " + carro.getAno());
+                            System.out.println("-----------------------------");
+                            
                         }
                     }
                     break;
