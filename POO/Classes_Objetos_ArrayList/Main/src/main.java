@@ -30,7 +30,7 @@ class Main {
 
         for (int i = 0; i < lista.size(); i++) {
             /* Compara os nome ignorando maiúsculas e minúsculas */
-            if (lista.get(i).getNome().equalsIgnoreCase(nomeBusca)) {
+        if (lista.get(i).getNome().equalsIgnoreCase(nomeBusca)) {
                 lista.get(i).setIdade(21);
                 encontrado = true;
                 lista.remove(i);
