@@ -29,5 +29,6 @@ public class atividade1 {
         // System.out.print(elemento + " ");
         // }
 
+        scanner.close();
     }
 }
