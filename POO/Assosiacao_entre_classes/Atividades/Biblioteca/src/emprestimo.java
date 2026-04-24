@@ -1,9 +1,9 @@
-public class emprestimo {
-    private cliente cliente;
-    private livro livro;
+public class Emprestimo {
+    private Cliente cliente;
+    private Livro livro;
     private String dataEmprestimo;
 
-    public emprestimo(cliente cliente, livro livro, String dataEmprestimo) {
+    public Emprestimo(Cliente cliente, Livro livro, String dataEmprestimo) {
         this.cliente = cliente;
         this.livro = livro;
         this.dataEmprestimo = dataEmprestimo;
@@ -11,7 +11,9 @@ public class emprestimo {
 
     @Override
     public String toString() {
-        return  "\n ---\n\n" + "Dados do Empréstimo:\nCliente: " + cliente.getNome() + " (idade: " + cliente.getIdade() + ")\nLivro: " + livro.getTitulo() + " por " + livro.getAutor() + "\nData de Empréstimo: " + dataEmprestimo;
+        return "\n ---\n\n" + "Dados do Empréstimo:\nCliente: " + cliente.getNome() + " (Idade: " + cliente.getIdade()
+                + ")\nLivro: " + livro.getTitulo() + " por " + livro.getAutor() + "\nData de Empréstimo: "
+                + dataEmprestimo;
     }
 
 }

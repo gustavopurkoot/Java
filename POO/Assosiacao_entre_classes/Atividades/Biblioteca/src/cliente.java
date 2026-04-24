@@ -1,8 +1,8 @@
-public class cliente {
+public class Cliente {
     private String nome;
     private int idade;
 
-    public cliente(String nome, int idade) {
+    public Cliente(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
     }
