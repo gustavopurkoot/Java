@@ -1,17 +1,18 @@
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 import java.util.Scanner;
 
 class Temperaturas {
 
     public static void main(String[] args) throws Exception {
 
+        /* Lista que armazenará as linhas do arquivo */
         ArrayList<String> lista = new ArrayList<>();
 
-        File arquivo = new File("src/temperaturas.txt");
+        /* Arquivo */
+        File arquivo = new File("temperaturas.txt");
 
+        /* Leitura do arquivo */
         Scanner leitor = new Scanner(arquivo);
 
         while (leitor.hasNextLine()) {
@@ -20,28 +21,18 @@ class Temperaturas {
 
         leitor.close();
 
-        List<String> ordemMeses = List.of(
-            "Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho",
-            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-        );
-
-        lista.sort(Comparator.comparingInt(linha -> {
-            String mes = linha.split(";")[0];
-            return ordemMeses.indexOf(mes);
-        }));
-
-        /* Calcula a média anual */
         double somaTemperaturas = 0;
 
         for (String linha : lista) {
+
             String[] partes = linha.split(";");
             double temperatura = Double.parseDouble(partes[1]);
+
             somaTemperaturas += temperatura;
         }
 
         double mediaAnual = somaTemperaturas / lista.size();
 
-        /* Exibe a tabela */
         System.out.println("-------------------------------------------");
         System.out.println("Mês              Temperatura      Diferença");
         System.out.println("-------------------------------------------");
@@ -52,6 +43,7 @@ class Temperaturas {
 
             String mes = partes[0];
             double temperatura = Double.parseDouble(partes[1]);
+
             double diferenca = temperatura - mediaAnual;
 
             System.out.printf(
@@ -64,6 +56,10 @@ class Temperaturas {
         }
 
         System.out.println("-------------------------------------------");
-        System.out.printf("Temperatura média anual: %.1f°C\n", mediaAnual);
+
+        System.out.printf(
+            "Temperatura média anual: %.1f°C\n",
+            mediaAnual
+        );
     }
 }
