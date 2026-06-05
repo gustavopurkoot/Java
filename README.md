@@ -64,7 +64,8 @@ Repositório dedicado aos meus estudos em **Java**, contendo exercícios, exempl
         ┣ 📂 Exemplo     → Validação de idade com throw
         └ 📂 Atividades
            ┣ 📂 Atividade1  → Consulta em vetor com ArrayIndexOutOfBoundsException
-           └ 📂 Atividade2  → Validação de nota com IllegalArgumentException
+           ┣ 📂 Atividade2  → Validação de nota com IllegalArgumentException
+           └ 📂 Atividade3  →  Simulação de saque bancário com IllegalArgumentException
 ```
 
 ---
